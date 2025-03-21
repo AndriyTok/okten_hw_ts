@@ -42,3 +42,16 @@ var a = 100;
 var b = '100';
 var c = true;
 console.log(typeof a, typeof b, typeof c);
+// #ruUtWDUI
+// Додаткове для тих хто цікавився prompt`oм
+// - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
+var my_name = prompt('Введіть своє ім`я: ');
+var surname = prompt('Введіть своє прізвище: ');
+var middle_name = prompt('Введіть своє прізвище:');
+var full_name = "".concat(my_name, " ").concat(surname, " ").concat(middle_name);
+if (typeof (my_name) === 'string' && typeof (surname) === 'string' && typeof (middle_name) === 'string') {
+    console.log(full_name);
+}
+else {
+    console.log('Дані було введено некоректно!');
+}
