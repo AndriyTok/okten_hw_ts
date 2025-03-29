@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2021",
-    "lib": ["ES2021", "ES2015", "ES2016", "DOM", "DOM.Iterable"],
+    "lib": ["ES2017","ES2021", "DOM", "DOM.Iterable"],
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "include": ["src"]
+  "include": ["src", "src/hw_2/task_9"]
 }
