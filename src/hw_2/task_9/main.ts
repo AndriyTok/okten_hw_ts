@@ -37,7 +37,7 @@ namespace hw_2_task_9 {
         monthDuration: number;
     }
 
-    let coursesAndDurationArray: Array<ICourse> = [
+    let coursesAndDurationArray: ICourse[] = [
         {title: 'JavaScript Complex', monthDuration: 5},
         {title: 'Java Complex', monthDuration: 6},
         {title: 'Python Complex', monthDuration: 6},
@@ -48,7 +48,7 @@ namespace hw_2_task_9 {
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
 
-    let courses_div:HTMLDivElement = document.createElement('div');
+    const courses_div:HTMLDivElement = document.createElement('div');
 
 //using .foreach() method
 // coursesAndDurationArray.forEach((course, index) => {
@@ -59,7 +59,7 @@ namespace hw_2_task_9 {
 
 //using for of
 
-    for (const [index, course] of (coursesAndDurationArray as ICourse[]).entries()) {
+    for (const [index, course] of coursesAndDurationArray.entries()) {
         const course_p:HTMLParagraphElement = document.createElement('p');
         course_p.innerText = `Course ${index + 1}; Title: ${course.title}; Month_duration: ${course.monthDuration}`;
         courses_div.appendChild(course_p);
@@ -94,4 +94,6 @@ namespace hw_2_task_9 {
         container.appendChild(item);
     }
     document.body.appendChild(container);
+
+    console.log(Array.isArray(coursesAndDurationArray));
 }
